@@ -1,7 +1,631 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Bitcoin Mining Energy Consumption - Bitcoin</title><meta name=description content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Bitcoin Mining Energy Consumption - Bitcoin</title>
+    
+    <meta name="description" content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.
  Bitcoins Energy Consumption In Summer Rise Or Fall Bitcoin Energy Bitcoin Transaction
-The Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network."><meta name=author content><style>:root{--gap:24px;--content-gap:40px;--nav-width:1024px;--main-width:640px;--header-height:60px;--footer-height:60px;--radius:8px;--theme:#fff;--entry:#fff;--primary:rgba(0, 0, 0, 0.88);--secondary:rgba(0, 0, 0, 0.56);--tertiary:rgba(0, 0, 0, 0.16);--content:rgba(0, 0, 0, 0.88);--hljs-bg:#1c1d21;--code-bg:#f5f5f5;--border:#eee}.dark{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.64);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#5b5d67}.list{background:var(--code-bg)}.dark.list{background:var(--theme)}*,*::before,*::after{box-sizing:border-box}html{-webkit-tap-highlight-color:transparent}body{margin:0;color:var(--primary);font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;font-size:18px;line-height:1.8;word-break:break-word;background:var(--theme)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0;color:var(--primary);line-height:1.2}p{margin-top:0;margin-bottom:0}strong,b{font-weight:500}ul{margin:0;padding:0}a{color:var(--primary);text-decoration:none}figure{margin:0}table{width:100%;border-collapse:collapse;border-spacing:0}button,input,textarea{padding:0;font:inherit;background:0 0;border:0;-webkit-appearance:none}button,input[type=button],input[type=submit]{cursor:pointer}input,textarea{padding:0;border:0;outline:0}input:-webkit-autofill,textarea:-webkit-autofill{box-shadow:0 0 0 50px var(--theme)inset}img{display:block;max-width:100%}.nav{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:calc(var(--nav-width) + var(--gap) * 2);margin-left:auto;margin-right:auto}.nav a{display:block;line-height:var(--header-height)}.logo,.menu{margin-left:var(--gap);margin-right:var(--gap)}.logo a{font-size:24px;font-weight:700}.menu{display:flex;list-style:none;word-break:keep-all;overflow-x:auto}.menu li+li{margin-left:var(--gap)}.menu a{font-size:16px}.main{position:relative;min-height:calc(100vh - var(--header-height) - var(--footer-height));max-width:calc(var(--main-width) + var(--gap) * 2);margin-left:auto;margin-right:auto;padding:var(--gap)}.page-header{margin-bottom:24px}.page-header h1{font-size:40px}.pagination{display:flex}.pagination a{color:var(--theme);font-size:13px;line-height:36px;background:var(--primary);border-radius:calc(36px/2)}.pagination .prev{padding-left:16px;padding-right:18px}.pagination .next{margin-left:auto;padding-left:18px;padding-right:16px}.first-entry{position:relative;display:flex;flex-direction:column;justify-content:center;height:320px;margin-bottom:var(--header-height)}.first-entry .entry-header{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}.first-entry .entry-header h2{font-size:40px}.first-entry .entry-content{margin-top:14px;margin-bottom:14px;font-size:16px;-webkit-line-clamp:3}.first-entry .entry-footer{font-size:14px}.post-entry{position:relative;margin-bottom:var(--gap);padding:var(--gap);background:var(--entry);border-radius:var(--radius);transition:transform .1s}.post-entry:active{transform:scale(.96)}.tag-entry .entry-content,.tag-entry .entry-footer{display:none}.entry-header h2{font-size:24px}.entry-content{margin-top:8px;margin-bottom:8px;color:var(--secondary);font-size:14px;line-height:1.6;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.entry-footer{color:var(--secondary);font-size:13px}.entry-link{position:absolute;left:0;right:0;top:0;bottom:0}.post-header{margin-top:24px;margin-bottom:var(--content-gap)}.post-title{margin-bottom:2px;font-size:40px;transform:translateX(-2px)}.post-meta{color:var(--secondary);font-size:14px}.post-content{color:var(--content)}.post-content h1{margin-top:40px;margin-bottom:32px}.post-content h2{margin-top:32px;margin-bottom:24px}.post-content h3,.post-content h4,.post-content h5,.post-content h6{margin-top:24px;margin-bottom:16px}.post-content h1{font-size:40px}.post-content h2{font-size:32px}.post-content h3{font-size:24px}.post-content h4{font-size:16px}.post-content h5{font-size:14px}.post-content h6{font-size:12px}.post-content a{box-shadow:0 1px 0 var(--primary)}.post-content a code{margin-left:0;margin-right:0;border-radius:0;box-shadow:0 -1px 0 var(--primary)inset}.post-content del{text-decoration:none;background:linear-gradient(to right,var(--primary) 100%,transparent 0)0/1px 1px repeat-x}.post-content p,.post-content ul,.post-content ol,.post-content dl{margin-bottom:var(--content-gap)}.post-content ul,.post-content ol{padding-left:20px}.post-content li{margin-top:5px}.post-content li p{margin-bottom:0}.post-content dl{display:flex;flex-wrap:wrap;margin:0}.post-content dt{width:25%;font-weight:700}.post-content dd{width:75%;margin-left:0;padding-left:10px}.post-content dt~dt,.post-content dd~dd{margin-top:10px}.post-content table{margin-bottom:32px}.post-content table th,.post-content table:not(.highlighttable) td{min-width:80px;padding:12px 8px;line-height:1.5;border-bottom:1px solid var(--border)}.post-content table th{font-size:14px;text-align:left}.post-content table:not(.highlighttable) td code:only-child{margin-left:0;margin-right:0}.post-content .highlight,.post-content pre{margin-left:calc(var(--gap) * -1);margin-right:calc(var(--gap) * -1);margin-bottom:32px;background:var(--hljs-bg)!important;border-radius:var(--radius);overflow-x:auto}.post-content ul pre{margin-left:calc(var(--gap) * -2)}.post-content .highlight pre{margin-left:0;margin-right:0;margin-bottom:0}.post-content .highlighttable{table-layout:fixed}.post-content .highlighttable td:first-child{width:40px}.post-content .highlighttable td .linenodiv{padding-right:0!important}.post-content .highlighttable td .linenodiv pre,.post-content .highlighttable td .highlight{margin-bottom:0}.post-content .highlighttable td .highlight pre code::-webkit-scrollbar{display:none}.post-content .highlight span{background:0 0!important}.post-content code{margin-left:4px;margin-right:4px;padding:4px 6px;font-family:Menlo,Monaco,courier new,Courier,monospace;font-size:.78em;line-height:1.5;background:var(--code-bg);border-radius:2px}.post-content pre code{display:block;margin-left:0;margin-right:0;padding:var(--gap);color:rgba(255,255,255,.8);background:0 0;border-radius:0}.post-content blockquote{margin:0 0 0 calc(var(--gap) * -1);padding:0 0 0 21px;border-left:3px solid var(--primary)}.post-content hr{height:1px;margin-top:56px;margin-bottom:56px;background:var(--tertiary);border-top:0;border-bottom:0}.post-content iframe{max-width:100%}.post-footer{margin-top:56px}.post-tags li{display:inline-block}.post-tags li+li{margin-left:3px}.post-tags a{display:block;padding-left:14px;padding-right:14px;color:var(--secondary);font-size:14px;line-height:34px;background:var(--code-bg);border-radius:4px}.post-tags a:hover{background:var(--border)}.footer{max-width:calc(var(--main-width) + var(--gap) * 2);margin-left:auto;margin-right:auto;padding:calc((var(--footer-height) - var(--gap))/2)var(--gap);color:var(--secondary);font-size:12px;text-align:center;line-height:24px}.footer span{margin-left:1px;margin-right:1px}.footer a{color:inherit}.footer a:hover{color:var(--primary);border-bottom:1px solid var(--primary)}.not-found{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;height:80%;font-size:160px;font-weight:700}</style><link rel=apple-touch-icon href=http://redfox58.github.io/bitcoin/apple-touch-icon.png><link rel=icon href=http://redfox58.github.io/bitcoin/favicon.ico><meta name=generator content="Hugo 0.83.1"><meta name=twitter:card content="summary"><meta name=twitter:title content="Bitcoin Mining Energy Consumption"><meta name=twitter:description content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …"><meta property="og:title" content="Bitcoin Mining Energy Consumption"><meta property="og:description" content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …"><meta property="og:type" content="article"><meta property="og:url" content="http://redfox58.github.io/bitcoin/bitcoin-mining-energy-consumption/"><meta property="article:published_time" content="2021-02-02T18:29:10+00:00"><meta property="article:modified_time" content="2021-02-02T18:29:10+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Bitcoin Mining Energy Consumption","name":"Bitcoin Mining Energy Consumption","description":"On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …","articleBody":"On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.\n Bitcoins Energy Consumption In Summer Rise Or Fall Bitcoin Energy Bitcoin Transaction\nThe Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network. Bitcoin mining energy consumption. 552021 As a result estimates for what percentage of Bitcoin mining uses renewable energy vary widely. Network hashrate and mining equipment efficiency. In addition the amount of energy currently being used is only increasing as more miners start working on the blockchain.\nA handy comparison page. The BECI updates every thirty seconds and provides an estimate energy consumption figure alongside a theoretical upper and lower limit. Antminer S9 Power Consumption Power Consumption Of ASIC Bitcoin Miners The Antminer S9 consumes 1372 Watts for the 14 THs batch.\nElectricity consumed by bitcoin network depends on two factors. 4 of them would consume 5488 Watts. The CBECI is maintained by the Cambridge Centre for Alternative Finance CCAF at Judge Business School University of Cambridge.\nHeres how this number compares to a selection of countries companies and more. 5132021 Although there are no clear estimates about the energy mix used in bitcoin mining one report indicated that 73 of bitcoins energy consumption. However when the energy consumption rate of BTC mining was compared to some larger countries like China 6543TWh and the US 3989TWh the cryptocurrency energy consumption is relatively light.\n4202021 Putting Bitcoins Power Consumption Into Perspective. 2132021 According to the BBC Cambridges tool has ranked Bitcoins electricity consumption above that of the entire country of Argentina 121 terrawatt. 3232021 Cambridge Universitys Centre for Alternative Energy uses an index called the Bitcoin Electricity Consumption Index BECI to calculate Bitcoins energy consumption.\n5132021 Thats compared to Googles entire energy usage of 122 TWh and the approximately 200 TWh used by all data centers in the world except. In December 2019 one report suggested that 73 of Bitcoins energy consumption was carbon neutral. Electric power is measured in watts W electricity consumption watt-hours Wh hashrate trillions hashes per second THs mining efficiency watts per trillion hashes per second WTHs.\nPower consumption of 135 THs Bitcoin miners Antminer S9. 3102021 A division of the Cambridge Centre for Alternative Finance the department estimates the cryptos annualized energy consumption to be around 12748 terawatt-hours TWh. 3132021 Bitcoin now consumes 128 terawatts of energy annually according to Cambridge estimates representing 059 of total energy consumption worldwide.\n2272021 Cambridges Centre for Alternative Finances estimates that bitcoins annualised electricity consumption hovers just above 115 terawatt.\n Things You Need To Know About Crypto And Its Energy Consumption Energy About Me Blog Bitcoin Account\n Infographic Bitcoin Devours More Electricity Than Switzerland Bitcoin Electricity Online Networking\n Ms Bitcoin Mining Uses As Much Electricity As 1m Us Homes Bitcoin Mining Bitcoin Generator Bitcoin Hack\n Where Does Free Bitcoin Games Legit Bitcoin Mining Sites Philippines Digi Economist Bitcoin Energy Consumption Leave An Fintech Investing Investment In India\n Bitcoin Miners You Should Give Us A Ring Https Buff Ly 2ad29vp Utm Content Buffer329c2 Utm Medium Socia Renewable Energy News Energy Consumption Bitcoin\n Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy\n Bitcoin Mining Consuming More Electricity Than 159 Countries\n 22 Twitter Bitcoin Chart Bitcoin Bitcoin Value\n Billions Dollars Cost Of Electricity Consumption Of Bitcoin Mining Really Is Paying From What Bitcoin Bitcoin Mining Electricity\n Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy\n Bitcoin Minings Electricity Bill Is It Worth It Bitcoin Bitcoin Mining What Is Bitcoin Mining\n Bitcoin Mining Consumes More Electricity Than 20 European Countries What Is Bitcoin Mining Bitcoin Generator Bitcoin Mining\n Your Key To Success Earn Bitcoins On Android Dollar Bitcoinfamily Bitcoinbabe Bitcoin1mlnclub Bitcoin What Is Bitcoin Mining Bitcoin Mining\n Pin On One Million Bitcoin\n Bitcoin Mining Energy Consumption Is It Really A Problem Bitcoin Mining Bitcoin Geothermal Energy\n Bitcoin Mining Electricity Consumption Vs Us States What Is Bitcoin Mining Bitcoin Mining Bitcoin Mining Rigs\n Which Countries Use The Most Electricity Https Www Statista Com Chart 19909 Electricity Consumption Worldwi Electricity Consumption Electricity Infographic\n Bitcoin Is Getting More Eco Friendly Despite More Computing Power Being Dedicated To Bitcoin Mining Less Electr Bitcoin Electricity Improve Energy Efficiency\n Bitcoin Energy Consumption Infographic Bitcoin Infographic Energy Consumption\n","wordCount":"754","inLanguage":"en","datePublished":"2021-02-02T18:29:10Z","dateModified":"2021-02-02T18:29:10Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://redfox58.github.io/bitcoin/bitcoin-mining-energy-consumption/"},"publisher":{"@type":"Organization","name":"Bitcoin","logo":{"@type":"ImageObject","url":"http://redfox58.github.io/bitcoin/favicon.ico"}}}</script></head><body class=single><header class=header><nav class=nav><p class=logo><a href=http://redfox58.github.io/bitcoin>Bitcoin</a></p></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Bitcoin Mining Energy Consumption</h1><div class=post-meta>February 2, 2021</div></header><div class=post-content><p>On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.</p><p><a href=https://i.pinimg.com/originals/3f/36/a3/3f36a3225b7a442059f1ea292cdfd7e6.png><img src=https://i.pinimg.com/originals/3f/36/a3/3f36a3225b7a442059f1ea292cdfd7e6.png alt></a> Bitcoins Energy Consumption In Summer Rise Or Fall Bitcoin Energy Bitcoin Transaction</p><h3 id=the-cambridge-bitcoin-electricity-consumption-index-cbeci-provides-a-real-time-estimate-of-the-total-electricity-consumption-of-the-bitcoin-network>The Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network.</h3><p><img src=https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png alt><strong>Bitcoin mining energy consumption</strong>. 552021 As a result estimates for what percentage of Bitcoin mining uses renewable energy vary widely. Network hashrate and mining equipment efficiency. In addition the amount of energy currently being used is only increasing as more miners start working on the blockchain.</p><p>A handy comparison page. The BECI updates every thirty seconds and provides an estimate energy consumption figure alongside a theoretical upper and lower limit. Antminer S9 Power Consumption Power Consumption Of ASIC Bitcoin Miners The Antminer S9 consumes 1372 Watts for the 14 THs batch.</p><p>Electricity consumed by bitcoin network depends on two factors. 4 of them would consume 5488 Watts. The CBECI is maintained by the Cambridge Centre for Alternative Finance CCAF at Judge Business School University of Cambridge.</p><p>Heres how this number compares to a selection of countries companies and more. 5132021 Although there are no clear estimates about the energy mix used in bitcoin mining one report indicated that 73 of bitcoins energy consumption. However when the energy consumption rate of BTC mining was compared to some larger countries like China 6543TWh and the US 3989TWh the cryptocurrency energy consumption is relatively light.</p><p>4202021 Putting Bitcoins Power Consumption Into Perspective. 2132021 According to the BBC Cambridges tool has ranked Bitcoins electricity consumption above that of the entire country of Argentina 121 terrawatt. 3232021 Cambridge Universitys Centre for Alternative Energy uses an index called the Bitcoin Electricity Consumption Index BECI to calculate Bitcoins energy consumption.</p><p>5132021 Thats compared to Googles entire energy usage of 122 TWh and the approximately 200 TWh used by all data centers in the world except. In December 2019 one report suggested that 73 of Bitcoins energy consumption was carbon neutral. Electric power is measured in watts W electricity consumption watt-hours Wh hashrate trillions hashes per second THs mining efficiency watts per trillion hashes per second WTHs.</p><p>Power consumption of 135 THs Bitcoin miners Antminer S9. 3102021 A division of the Cambridge Centre for Alternative Finance the department estimates the cryptos annualized energy consumption to be around 12748 terawatt-hours TWh. 3132021 Bitcoin now consumes 128 terawatts of energy annually according to Cambridge estimates representing 059 of total energy consumption worldwide.</p><p>2272021 Cambridges Centre for Alternative Finances estimates that bitcoins annualised electricity consumption hovers just above 115 terawatt.</p><p><a href=https://i.pinimg.com/originals/6d/99/63/6d9963ddb09ef6e19bf2a5cb88e9fb23.jpg><img src=https://i.pinimg.com/originals/6d/99/63/6d9963ddb09ef6e19bf2a5cb88e9fb23.jpg alt></a> Things You Need To Know About Crypto And Its Energy Consumption Energy About Me Blog Bitcoin Account</p><p><a href=https://i.pinimg.com/originals/e9/10/1a/e9101a2706c79864dedfa0d061f6b827.jpg><img src=https://i.pinimg.com/originals/e9/10/1a/e9101a2706c79864dedfa0d061f6b827.jpg alt></a> Infographic Bitcoin Devours More Electricity Than Switzerland Bitcoin Electricity Online Networking</p><p><a href=https://i.pinimg.com/originals/79/ba/bc/79babc568fb1fefda5e143636befdc5d.jpg><img src=https://i.pinimg.com/originals/79/ba/bc/79babc568fb1fefda5e143636befdc5d.jpg alt></a> Ms Bitcoin Mining Uses As Much Electricity As 1m Us Homes Bitcoin Mining Bitcoin Generator Bitcoin Hack</p><p><a href=https://i.pinimg.com/originals/f0/bf/ce/f0bfcea61f93694ef6ab4a993458ff31.jpg><img src=https://i.pinimg.com/originals/f0/bf/ce/f0bfcea61f93694ef6ab4a993458ff31.jpg alt></a> Where Does Free Bitcoin Games Legit Bitcoin Mining Sites Philippines Digi Economist Bitcoin Energy Consumption Leave An Fintech Investing Investment In India</p><p><a href=https://i.pinimg.com/originals/d8/87/8a/d8878ac470426413b9539a0b79eec6d4.png><img src=https://i.pinimg.com/originals/d8/87/8a/d8878ac470426413b9539a0b79eec6d4.png alt></a> Bitcoin Miners You Should Give Us A Ring Https Buff Ly 2ad29vp Utm Content Buffer329c2 Utm Medium Socia Renewable Energy News Energy Consumption Bitcoin</p><p><a href=https://i.pinimg.com/564x/d8/61/88/d8618830131022948795fd99d99a2623.jpg><img src=https://i.pinimg.com/564x/d8/61/88/d8618830131022948795fd99d99a2623.jpg alt></a> Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy</p><p><a href=https://i.pinimg.com/originals/08/69/6f/08696f9b3f736835910b463c64f77487.jpg><img src=https://i.pinimg.com/originals/08/69/6f/08696f9b3f736835910b463c64f77487.jpg alt></a> Bitcoin Mining Consuming More Electricity Than 159 Countries</p><p><a href=https://i.pinimg.com/originals/9a/42/98/9a42980994af386feacb79dfaaa4df05.jpg><img src=https://i.pinimg.com/originals/9a/42/98/9a42980994af386feacb79dfaaa4df05.jpg alt></a> 22 Twitter Bitcoin Chart Bitcoin Bitcoin Value</p><p><a href=https://i.pinimg.com/originals/79/e7/04/79e704ef3e6f2e4ba8672d235825e4f3.jpg><img src=https://i.pinimg.com/originals/79/e7/04/79e704ef3e6f2e4ba8672d235825e4f3.jpg alt></a> Billions Dollars Cost Of Electricity Consumption Of Bitcoin Mining Really Is Paying From What Bitcoin Bitcoin Mining Electricity</p><p><a href=https://i.pinimg.com/originals/d8/61/88/d8618830131022948795fd99d99a2623.jpg><img src=https://i.pinimg.com/originals/d8/61/88/d8618830131022948795fd99d99a2623.jpg alt></a> Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy</p><p><a href=https://i.pinimg.com/originals/d4/75/b2/d475b28ca35128ca15a5bf85b7be7bb2.png><img src=https://i.pinimg.com/originals/d4/75/b2/d475b28ca35128ca15a5bf85b7be7bb2.png alt></a> Bitcoin Minings Electricity Bill Is It Worth It Bitcoin Bitcoin Mining What Is Bitcoin Mining</p><p><a href=https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png><img src=https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png alt></a> Bitcoin Mining Consumes More Electricity Than 20 European Countries What Is Bitcoin Mining Bitcoin Generator Bitcoin Mining</p><p><a href=https://i.pinimg.com/600x315/22/95/97/2295978a84c9a7a8f3bb48348b296877.jpg><img src=https://i.pinimg.com/600x315/22/95/97/2295978a84c9a7a8f3bb48348b296877.jpg alt></a> Your Key To Success Earn Bitcoins On Android Dollar Bitcoinfamily Bitcoinbabe Bitcoin1mlnclub Bitcoin What Is Bitcoin Mining Bitcoin Mining</p><p><a href=https://i.pinimg.com/originals/30/1d/f5/301df54b966c5e5de88cc08620308bb0.jpg><img src=https://i.pinimg.com/originals/30/1d/f5/301df54b966c5e5de88cc08620308bb0.jpg alt></a> Pin On One Million Bitcoin</p><p><a href=https://i.pinimg.com/originals/39/79/38/397938785f55cb10a7a676515f98db47.png><img src=https://i.pinimg.com/originals/39/79/38/397938785f55cb10a7a676515f98db47.png alt></a> Bitcoin Mining Energy Consumption Is It Really A Problem Bitcoin Mining Bitcoin Geothermal Energy</p><p><a href=https://i.pinimg.com/originals/1b/e0/66/1be066c28f38d2a3b5d0ec67dfa80ab5.png><img src=https://i.pinimg.com/originals/1b/e0/66/1be066c28f38d2a3b5d0ec67dfa80ab5.png alt></a> Bitcoin Mining Electricity Consumption Vs Us States What Is Bitcoin Mining Bitcoin Mining Bitcoin Mining Rigs</p><p><a href=https://i.pinimg.com/originals/2c/64/7f/2c647fec501c81edbf6b6158759bd64d.jpg><img src=https://i.pinimg.com/originals/2c/64/7f/2c647fec501c81edbf6b6158759bd64d.jpg alt></a> Which Countries Use The Most Electricity Https Www Statista Com Chart 19909 Electricity Consumption Worldwi Electricity Consumption Electricity Infographic</p><p><a href=https://i.pinimg.com/originals/54/53/0b/54530b923514409c7580e6cd9a2f8aa2.jpg><img src=https://i.pinimg.com/originals/54/53/0b/54530b923514409c7580e6cd9a2f8aa2.jpg alt></a> Bitcoin Is Getting More Eco Friendly Despite More Computing Power Being Dedicated To Bitcoin Mining Less Electr Bitcoin Electricity Improve Energy Efficiency</p><p><a href=https://i.pinimg.com/originals/63/5b/c7/635bc7184a1c0e8100266c5d8b77b480.png><img src=https://i.pinimg.com/originals/63/5b/c7/635bc7184a1c0e8100266c5d8b77b480.png alt></a> Bitcoin Energy Consumption Infographic Bitcoin Infographic Energy Consumption</p></div></article></main></main></div><footer class=footer><span>&copy; 2021 <a href=http://redfox58.github.io/bitcoin>Bitcoin</a></span>
-<span>&#183;</span>
-<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
-<span>&#183;</span>
-<span>Theme️ <a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper</a></span></footer></body></html>
+The Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network.">
+    <meta name="author" content="">
+
+<style>
+ 
+:root {
+  --gap: 24px;
+  --content-gap: 40px;
+  --nav-width: 1024px;
+  --main-width: 640px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 8px;
+
+  --theme: #fff;
+  --entry: #fff;
+  --primary: rgba(0, 0, 0, 0.88);
+  --secondary: rgba(0, 0, 0, 0.56);
+  --tertiary: rgba(0, 0, 0, 0.16);
+  --content: rgba(0, 0, 0, 0.88);
+
+  --hljs-bg: #1c1d21;
+  --code-bg: #f5f5f5;
+  --border: #eee;
+}
+.dark {
+  --theme: #1d1e20;
+  --entry: #2e2e33;
+  --primary: rgba(255, 255, 255, 0.84);
+  --secondary: rgba(255, 255, 255, 0.56);
+  --tertiary: rgba(255, 255, 255, 0.16);
+  --content: rgba(255, 255, 255, 0.64);
+
+  --hljs-bg: #2e2e33;
+  --code-bg: #37383e;
+  --border: #5b5d67;
+}
+.list {
+  background: var(--code-bg);
+}
+.dark.list {
+  background: var(--theme);
+}
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  color: var(--primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  word-break: break-word;
+  background: var(--theme);
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--primary);
+  line-height: 1.2;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+strong,
+b {
+  font-weight: 500;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+figure {
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button,
+input,
+textarea {
+  padding: 0;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+button,
+input[type='button'],
+input[type='submit'] {
+  cursor: pointer;
+}
+input,
+textarea {
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  box-shadow: 0 0 0 50px var(--theme) inset;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  display: block;
+  line-height: var(--header-height);
+}
+.logo,
+.menu {
+  margin-left: var(--gap);
+  margin-right: var(--gap);
+}
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  word-break: keep-all;
+  overflow-x: auto;
+}
+.menu li + li {
+  margin-left: var(--gap);
+}
+.menu a {
+  font-size: 16px;
+}
+ 
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--gap);
+}
+.page-header {
+  margin-bottom: 24px;
+}
+.page-header h1 {
+  font-size: 40px;
+}
+.pagination {
+  display: flex;
+}
+.pagination a {
+  color: var(--theme);
+  font-size: 13px;
+  line-height: 36px;
+  background: var(--primary);
+  border-radius: calc(36px / 2);
+}
+.pagination .prev {
+  padding-left: 16px;
+  padding-right: 18px;
+}
+.pagination .next {
+  margin-left: auto;
+  padding-left: 18px;
+  padding-right: 16px;
+}
+ 
+.first-entry {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 320px;
+  margin-bottom: var(--header-height);
+}
+.first-entry .entry-header {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.first-entry .entry-header h2 {
+  font-size: 40px;
+}
+.first-entry .entry-content {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  -webkit-line-clamp: 3;
+}
+.first-entry .entry-footer {
+  font-size: 14px;
+}
+.post-entry {
+  position: relative;
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
+  transition: transform 0.1s;
+}
+.post-entry:active {
+  transform: scale(0.96);
+}
+.tag-entry .entry-content,
+.tag-entry .entry-footer {
+  display: none;
+}
+.entry-header h2 {
+  font-size: 24px;
+}
+.entry-content {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.entry-footer {
+  color: var(--secondary);
+  font-size: 13px;
+}
+.entry-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+ 
+.post-header {
+  margin-top: 24px;
+  margin-bottom: var(--content-gap);
+}
+.post-title {
+  margin-bottom: 2px;
+  font-size: 40px;
+  transform: translateX(-2px);
+}
+.post-meta {
+  color: var(--secondary);
+  font-size: 14px;
+}
+.post-content {
+  color: var(--content);
+}
+.post-content h1 {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.post-content h2 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.post-content h1 {
+  font-size: 40px;
+}
+.post-content h2 {
+  font-size: 32px;
+}
+.post-content h3 {
+  font-size: 24px;
+}
+.post-content h4 {
+  font-size: 16px;
+}
+.post-content h5 {
+  font-size: 14px;
+}
+.post-content h6 {
+  font-size: 12px;
+}
+.post-content a {
+  box-shadow: 0 1px 0 var(--primary);
+}
+.post-content a code {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  box-shadow: 0 -1px 0 var(--primary) inset;
+}
+.post-content del {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
+}
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content dl {
+  margin-bottom: var(--content-gap);
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 20px;
+}
+.post-content li {
+  margin-top: 5px;
+}
+.post-content li p {
+  margin-bottom: 0;
+}
+.post-content dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.post-content dt {
+  width: 25%;
+  font-weight: 700;
+}
+.post-content dd {
+  width: 75%;
+  margin-left: 0;
+  padding-left: 10px;
+}
+.post-content dt ~ dt,
+.post-content dd ~ dd {
+  margin-top: 10px;
+}
+.post-content table {
+  margin-bottom: 32px;
+}
+.post-content table th,
+.post-content table:not(.highlighttable) td {
+  min-width: 80px;
+  padding: 12px 8px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+.post-content table th {
+  font-size: 14px;
+  text-align: left;
+}
+.post-content table:not(.highlighttable) td code:only-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+.post-content .highlight,
+.post-content pre {
+  margin-left: calc(var(--gap) * -1);
+  margin-right: calc(var(--gap) * -1);
+  margin-bottom: 32px;
+  background: var(--hljs-bg) !important;
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.post-content ul pre {
+  margin-left: calc(var(--gap) * -2);
+}
+.post-content .highlight pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+ 
+.post-content .highlighttable {
+  table-layout: fixed;
+}
+.post-content .highlighttable td:first-child {
+  width: 40px;
+}
+.post-content .highlighttable td .linenodiv {
+  padding-right: 0 !important;
+}
+.post-content .highlighttable td .linenodiv pre,
+.post-content .highlighttable td .highlight {
+  margin-bottom: 0;
+}
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+  display: none;
+}
+ 
+.post-content .highlight span {
+  background: transparent !important;
+}
+
+.post-content code {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 4px 6px;
+  font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
+  font-size: 0.78em;
+  line-height: 1.5;
+  background: var(--code-bg);
+  border-radius: 2px;
+}
+.post-content pre code {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: var(--gap);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border-radius: 0;
+}
+.post-content blockquote {
+  margin: 0 0 0 calc(var(--gap) * -1);
+  padding: 0 0 0 21px;
+  border-left: 3px solid var(--primary);
+}
+.post-content hr {
+  height: 1px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  background: var(--tertiary);
+  border-top: 0;
+  border-bottom: 0;
+}
+.post-content iframe {
+  max-width: 100%;
+}
+.post-footer {
+  margin-top: 56px;
+}
+.post-tags li {
+  display: inline-block;
+}
+.post-tags li + li {
+  margin-left: 3px;
+}
+.post-tags a {
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 34px;
+  background: var(--code-bg);
+  border-radius: 4px;
+}
+.post-tags a:hover {
+  background: var(--border);
+}
+ 
+.footer {
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+  color: var(--secondary);
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+.footer span {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.footer a {
+  color: inherit;
+}
+.footer a:hover {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+ 
+.not-found {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  font-size: 160px;
+  font-weight: 700;
+}
+
+</style>
+    
+    <link rel="apple-touch-icon" href="http://redfox58.github.io/bitcoin/apple-touch-icon.png">
+    <link rel="icon" href="http://redfox58.github.io/bitcoin/favicon.ico">
+    <meta name="generator" content="Hugo 0.83.1" />
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bitcoin Mining Energy Consumption"/>
+<meta name="twitter:description" content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …"/>
+<meta property="og:title" content="Bitcoin Mining Energy Consumption" />
+<meta property="og:description" content="On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …"/>
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://redfox58.github.io/bitcoin/bitcoin-mining-energy-consumption/" />
+<meta property="article:published_time" content="2021-02-02T18:29:10+00:00" />
+<meta property="article:modified_time" content="2021-02-02T18:29:10+00:00" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bitcoin Mining Energy Consumption",
+  "name": "Bitcoin Mining Energy Consumption",
+  "description": "On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 …",
+  "articleBody": "On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.\n Bitcoins Energy Consumption In Summer Rise Or Fall Bitcoin Energy Bitcoin Transaction\nThe Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network. Bitcoin mining energy consumption. 552021 As a result estimates for what percentage of Bitcoin mining uses renewable energy vary widely. Network hashrate and mining equipment efficiency. In addition the amount of energy currently being used is only increasing as more miners start working on the blockchain.\nA handy comparison page. The BECI updates every thirty seconds and provides an estimate energy consumption figure alongside a theoretical upper and lower limit. Antminer S9 Power Consumption Power Consumption Of ASIC Bitcoin Miners The Antminer S9 consumes 1372 Watts for the 14 THs batch.\nElectricity consumed by bitcoin network depends on two factors. 4 of them would consume 5488 Watts. The CBECI is maintained by the Cambridge Centre for Alternative Finance CCAF at Judge Business School University of Cambridge.\nHeres how this number compares to a selection of countries companies and more. 5132021 Although there are no clear estimates about the energy mix used in bitcoin mining one report indicated that 73 of bitcoins energy consumption. However when the energy consumption rate of BTC mining was compared to some larger countries like China 6543TWh and the US 3989TWh the cryptocurrency energy consumption is relatively light.\n4202021 Putting Bitcoins Power Consumption Into Perspective. 2132021 According to the BBC Cambridges tool has ranked Bitcoins electricity consumption above that of the entire country of Argentina 121 terrawatt. 3232021 Cambridge Universitys Centre for Alternative Energy uses an index called the Bitcoin Electricity Consumption Index BECI to calculate Bitcoins energy consumption.\n5132021 Thats compared to Googles entire energy usage of 122 TWh and the approximately 200 TWh used by all data centers in the world except. In December 2019 one report suggested that 73 of Bitcoins energy consumption was carbon neutral. Electric power is measured in watts W electricity consumption watt-hours Wh hashrate trillions hashes per second THs mining efficiency watts per trillion hashes per second WTHs.\nPower consumption of 135 THs Bitcoin miners Antminer S9. 3102021 A division of the Cambridge Centre for Alternative Finance the department estimates the cryptos annualized energy consumption to be around 12748 terawatt-hours TWh. 3132021 Bitcoin now consumes 128 terawatts of energy annually according to Cambridge estimates representing 059 of total energy consumption worldwide.\n2272021 Cambridges Centre for Alternative Finances estimates that bitcoins annualised electricity consumption hovers just above 115 terawatt.\n Things You Need To Know About Crypto And Its Energy Consumption Energy About Me Blog Bitcoin Account\n Infographic Bitcoin Devours More Electricity Than Switzerland Bitcoin Electricity Online Networking\n Ms Bitcoin Mining Uses As Much Electricity As 1m Us Homes Bitcoin Mining Bitcoin Generator Bitcoin Hack\n Where Does Free Bitcoin Games Legit Bitcoin Mining Sites Philippines Digi Economist Bitcoin Energy Consumption Leave An Fintech Investing Investment In India\n Bitcoin Miners You Should Give Us A Ring Https Buff Ly 2ad29vp Utm Content Buffer329c2 Utm Medium Socia Renewable Energy News Energy Consumption Bitcoin\n Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy\n Bitcoin Mining Consuming More Electricity Than 159 Countries\n 22 Twitter Bitcoin Chart Bitcoin Bitcoin Value\n Billions Dollars Cost Of Electricity Consumption Of Bitcoin Mining Really Is Paying From What Bitcoin Bitcoin Mining Electricity\n Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy\n Bitcoin Minings Electricity Bill Is It Worth It Bitcoin Bitcoin Mining What Is Bitcoin Mining\n Bitcoin Mining Consumes More Electricity Than 20 European Countries What Is Bitcoin Mining Bitcoin Generator Bitcoin Mining\n Your Key To Success Earn Bitcoins On Android Dollar Bitcoinfamily Bitcoinbabe Bitcoin1mlnclub Bitcoin What Is Bitcoin Mining Bitcoin Mining\n Pin On One Million Bitcoin\n Bitcoin Mining Energy Consumption Is It Really A Problem Bitcoin Mining Bitcoin Geothermal Energy\n Bitcoin Mining Electricity Consumption Vs Us States What Is Bitcoin Mining Bitcoin Mining Bitcoin Mining Rigs\n Which Countries Use The Most Electricity Https Www Statista Com Chart 19909 Electricity Consumption Worldwi Electricity Consumption Electricity Infographic\n Bitcoin Is Getting More Eco Friendly Despite More Computing Power Being Dedicated To Bitcoin Mining Less Electr Bitcoin Electricity Improve Energy Efficiency\n Bitcoin Energy Consumption Infographic Bitcoin Infographic Energy Consumption\n",
+  "wordCount" : "754",
+  "inLanguage": "en",
+  "datePublished": "2021-02-02T18:29:10Z",
+  "dateModified": "2021-02-02T18:29:10Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://redfox58.github.io/bitcoin/bitcoin-mining-energy-consumption/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bitcoin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://redfox58.github.io/bitcoin/favicon.ico"
+    }
+  }
+}
+</script>
+	
+  </head>
+  <body class="single">
+	<header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="http://redfox58.github.io/bitcoin">Bitcoin</a></p>
+      </nav>
+    </header>
+	<main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Bitcoin Mining Energy Consumption</h1>
+    <div class="post-meta">February 2, 2021</div>
+  </header>
+  <div class="post-content"><p>On March 18 2021 the annual power consumption of the Bitcoin network was estimated to be 129 terawatt-hours TWh. 5102021 According to the data provided by Cambridge mining for cryptocurrency currently consumes more energy than the entire country of Sweden which consumes only 130 TWh compared to Bitcoins 150 TWh.</p>
+<p><a href="https://i.pinimg.com/originals/3f/36/a3/3f36a3225b7a442059f1ea292cdfd7e6.png"><img src="https://i.pinimg.com/originals/3f/36/a3/3f36a3225b7a442059f1ea292cdfd7e6.png" alt="" /></a> Bitcoins Energy Consumption In Summer Rise Or Fall Bitcoin Energy Bitcoin Transaction</p>
+<h3 id="the-cambridge-bitcoin-electricity-consumption-index-cbeci-provides-a-real-time-estimate-of-the-total-electricity-consumption-of-the-bitcoin-network">The Cambridge Bitcoin Electricity Consumption Index CBECI provides a real-time estimate of the total electricity consumption of the Bitcoin network.</h3>
+<p><img src="https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png" alt="" /><strong>Bitcoin mining energy consumption</strong>. 552021 As a result estimates for what percentage of Bitcoin mining uses renewable energy vary widely. Network hashrate and mining equipment efficiency. In addition the amount of energy currently being used is only increasing as more miners start working on the blockchain.</p>
+<p>A handy comparison page. The BECI updates every thirty seconds and provides an estimate energy consumption figure alongside a theoretical upper and lower limit. Antminer S9 Power Consumption Power Consumption Of ASIC Bitcoin Miners The Antminer S9 consumes 1372 Watts for the 14 THs batch.</p>
+<p>Electricity consumed by bitcoin network depends on two factors. 4 of them would consume 5488 Watts. The CBECI is maintained by the Cambridge Centre for Alternative Finance CCAF at Judge Business School University of Cambridge.</p>
+<p>Heres how this number compares to a selection of countries companies and more. 5132021 Although there are no clear estimates about the energy mix used in bitcoin mining one report indicated that 73 of bitcoins energy consumption. However when the energy consumption rate of BTC mining was compared to some larger countries like China 6543TWh and the US 3989TWh the cryptocurrency energy consumption is relatively light.</p>
+<p>4202021 Putting Bitcoins Power Consumption Into Perspective. 2132021 According to the BBC Cambridges tool has ranked Bitcoins electricity consumption above that of the entire country of Argentina 121 terrawatt. 3232021 Cambridge Universitys Centre for Alternative Energy uses an index called the Bitcoin Electricity Consumption Index BECI to calculate Bitcoins energy consumption.</p>
+<p>5132021 Thats compared to Googles entire energy usage of 122 TWh and the approximately 200 TWh used by all data centers in the world except. In December 2019 one report suggested that 73 of Bitcoins energy consumption was carbon neutral. Electric power is measured in watts W electricity consumption watt-hours Wh hashrate trillions hashes per second THs mining efficiency watts per trillion hashes per second WTHs.</p>
+<p>Power consumption of 135 THs Bitcoin miners Antminer S9. 3102021 A division of the Cambridge Centre for Alternative Finance the department estimates the cryptos annualized energy consumption to be around 12748 terawatt-hours TWh. 3132021 Bitcoin now consumes 128 terawatts of energy annually according to Cambridge estimates representing 059 of total energy consumption worldwide.</p>
+<p>2272021 Cambridges Centre for Alternative Finances estimates that bitcoins annualised electricity consumption hovers just above 115 terawatt.</p>
+<p><a href="https://i.pinimg.com/originals/6d/99/63/6d9963ddb09ef6e19bf2a5cb88e9fb23.jpg"><img src="https://i.pinimg.com/originals/6d/99/63/6d9963ddb09ef6e19bf2a5cb88e9fb23.jpg" alt="" /></a> Things You Need To Know About Crypto And Its Energy Consumption Energy About Me Blog Bitcoin Account</p>
+<p><a href="https://i.pinimg.com/originals/e9/10/1a/e9101a2706c79864dedfa0d061f6b827.jpg"><img src="https://i.pinimg.com/originals/e9/10/1a/e9101a2706c79864dedfa0d061f6b827.jpg" alt="" /></a> Infographic Bitcoin Devours More Electricity Than Switzerland Bitcoin Electricity Online Networking</p>
+<p><a href="https://i.pinimg.com/originals/79/ba/bc/79babc568fb1fefda5e143636befdc5d.jpg"><img src="https://i.pinimg.com/originals/79/ba/bc/79babc568fb1fefda5e143636befdc5d.jpg" alt="" /></a> Ms Bitcoin Mining Uses As Much Electricity As 1m Us Homes Bitcoin Mining Bitcoin Generator Bitcoin Hack</p>
+<p><a href="https://i.pinimg.com/originals/f0/bf/ce/f0bfcea61f93694ef6ab4a993458ff31.jpg"><img src="https://i.pinimg.com/originals/f0/bf/ce/f0bfcea61f93694ef6ab4a993458ff31.jpg" alt="" /></a> Where Does Free Bitcoin Games Legit Bitcoin Mining Sites Philippines Digi Economist Bitcoin Energy Consumption Leave An Fintech Investing Investment In India</p>
+<p><a href="https://i.pinimg.com/originals/d8/87/8a/d8878ac470426413b9539a0b79eec6d4.png"><img src="https://i.pinimg.com/originals/d8/87/8a/d8878ac470426413b9539a0b79eec6d4.png" alt="" /></a> Bitcoin Miners You Should Give Us A Ring Https Buff Ly 2ad29vp Utm Content Buffer329c2 Utm Medium Socia Renewable Energy News Energy Consumption Bitcoin</p>
+<p><a href="https://i.pinimg.com/564x/d8/61/88/d8618830131022948795fd99d99a2623.jpg"><img src="https://i.pinimg.com/564x/d8/61/88/d8618830131022948795fd99d99a2623.jpg" alt="" /></a> Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy</p>
+<p><a href="https://i.pinimg.com/originals/08/69/6f/08696f9b3f736835910b463c64f77487.jpg"><img src="https://i.pinimg.com/originals/08/69/6f/08696f9b3f736835910b463c64f77487.jpg" alt="" /></a> Bitcoin Mining Consuming More Electricity Than 159 Countries</p>
+<p><a href="https://i.pinimg.com/originals/9a/42/98/9a42980994af386feacb79dfaaa4df05.jpg"><img src="https://i.pinimg.com/originals/9a/42/98/9a42980994af386feacb79dfaaa4df05.jpg" alt="" /></a> 22 Twitter Bitcoin Chart Bitcoin Bitcoin Value</p>
+<p><a href="https://i.pinimg.com/originals/79/e7/04/79e704ef3e6f2e4ba8672d235825e4f3.jpg"><img src="https://i.pinimg.com/originals/79/e7/04/79e704ef3e6f2e4ba8672d235825e4f3.jpg" alt="" /></a> Billions Dollars Cost Of Electricity Consumption Of Bitcoin Mining Really Is Paying From What Bitcoin Bitcoin Mining Electricity</p>
+<p><a href="https://i.pinimg.com/originals/d8/61/88/d8618830131022948795fd99d99a2623.jpg"><img src="https://i.pinimg.com/originals/d8/61/88/d8618830131022948795fd99d99a2623.jpg" alt="" /></a> Energy Consumption Of Bitcoin Mining The Good The Bad And The Future Bitcoin Mining Bitcoin Future Energy</p>
+<p><a href="https://i.pinimg.com/originals/d4/75/b2/d475b28ca35128ca15a5bf85b7be7bb2.png"><img src="https://i.pinimg.com/originals/d4/75/b2/d475b28ca35128ca15a5bf85b7be7bb2.png" alt="" /></a> Bitcoin Minings Electricity Bill Is It Worth It Bitcoin Bitcoin Mining What Is Bitcoin Mining</p>
+<p><a href="https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png"><img src="https://i.pinimg.com/originals/79/f8/5c/79f85ca07ce5ce30d19bbf58820aacd4.png" alt="" /></a> Bitcoin Mining Consumes More Electricity Than 20 European Countries What Is Bitcoin Mining Bitcoin Generator Bitcoin Mining</p>
+<p><a href="https://i.pinimg.com/600x315/22/95/97/2295978a84c9a7a8f3bb48348b296877.jpg"><img src="https://i.pinimg.com/600x315/22/95/97/2295978a84c9a7a8f3bb48348b296877.jpg" alt="" /></a> Your Key To Success Earn Bitcoins On Android Dollar Bitcoinfamily Bitcoinbabe Bitcoin1mlnclub Bitcoin What Is Bitcoin Mining Bitcoin Mining</p>
+<p><a href="https://i.pinimg.com/originals/30/1d/f5/301df54b966c5e5de88cc08620308bb0.jpg"><img src="https://i.pinimg.com/originals/30/1d/f5/301df54b966c5e5de88cc08620308bb0.jpg" alt="" /></a> Pin On One Million Bitcoin</p>
+<p><a href="https://i.pinimg.com/originals/39/79/38/397938785f55cb10a7a676515f98db47.png"><img src="https://i.pinimg.com/originals/39/79/38/397938785f55cb10a7a676515f98db47.png" alt="" /></a> Bitcoin Mining Energy Consumption Is It Really A Problem Bitcoin Mining Bitcoin Geothermal Energy</p>
+<p><a href="https://i.pinimg.com/originals/1b/e0/66/1be066c28f38d2a3b5d0ec67dfa80ab5.png"><img src="https://i.pinimg.com/originals/1b/e0/66/1be066c28f38d2a3b5d0ec67dfa80ab5.png" alt="" /></a> Bitcoin Mining Electricity Consumption Vs Us States What Is Bitcoin Mining Bitcoin Mining Bitcoin Mining Rigs</p>
+<p><a href="https://i.pinimg.com/originals/2c/64/7f/2c647fec501c81edbf6b6158759bd64d.jpg"><img src="https://i.pinimg.com/originals/2c/64/7f/2c647fec501c81edbf6b6158759bd64d.jpg" alt="" /></a> Which Countries Use The Most Electricity Https Www Statista Com Chart 19909 Electricity Consumption Worldwi Electricity Consumption Electricity Infographic</p>
+<p><a href="https://i.pinimg.com/originals/54/53/0b/54530b923514409c7580e6cd9a2f8aa2.jpg"><img src="https://i.pinimg.com/originals/54/53/0b/54530b923514409c7580e6cd9a2f8aa2.jpg" alt="" /></a> Bitcoin Is Getting More Eco Friendly Despite More Computing Power Being Dedicated To Bitcoin Mining Less Electr Bitcoin Electricity Improve Energy Efficiency</p>
+<p><a href="https://i.pinimg.com/originals/63/5b/c7/635bc7184a1c0e8100266c5d8b77b480.png"><img src="https://i.pinimg.com/originals/63/5b/c7/635bc7184a1c0e8100266c5d8b77b480.png" alt="" /></a> Bitcoin Energy Consumption Infographic Bitcoin Infographic Energy Consumption</p>
+</div>
+  
+</article></main>
+</main>
+</div>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://redfox58.github.io/bitcoin">Bitcoin</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+</body>
+</html>

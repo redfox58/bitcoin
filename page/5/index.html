@@ -1,25 +1,722 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Bitcoin</title><meta name=description content><meta name=author content><style>:root{--gap:24px;--content-gap:40px;--nav-width:1024px;--main-width:640px;--header-height:60px;--footer-height:60px;--radius:8px;--theme:#fff;--entry:#fff;--primary:rgba(0, 0, 0, 0.88);--secondary:rgba(0, 0, 0, 0.56);--tertiary:rgba(0, 0, 0, 0.16);--content:rgba(0, 0, 0, 0.88);--hljs-bg:#1c1d21;--code-bg:#f5f5f5;--border:#eee}.dark{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.64);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#5b5d67}.list{background:var(--code-bg)}.dark.list{background:var(--theme)}*,*::before,*::after{box-sizing:border-box}html{-webkit-tap-highlight-color:transparent}body{margin:0;color:var(--primary);font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;font-size:18px;line-height:1.8;word-break:break-word;background:var(--theme)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0;color:var(--primary);line-height:1.2}p{margin-top:0;margin-bottom:0}strong,b{font-weight:500}ul{margin:0;padding:0}a{color:var(--primary);text-decoration:none}figure{margin:0}table{width:100%;border-collapse:collapse;border-spacing:0}button,input,textarea{padding:0;font:inherit;background:0 0;border:0;-webkit-appearance:none}button,input[type=button],input[type=submit]{cursor:pointer}input,textarea{padding:0;border:0;outline:0}input:-webkit-autofill,textarea:-webkit-autofill{box-shadow:0 0 0 50px var(--theme)inset}img{display:block;max-width:100%}.nav{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:calc(var(--nav-width) + var(--gap) * 2);margin-left:auto;margin-right:auto}.nav a{display:block;line-height:var(--header-height)}.logo,.menu{margin-left:var(--gap);margin-right:var(--gap)}.logo a{font-size:24px;font-weight:700}.menu{display:flex;list-style:none;word-break:keep-all;overflow-x:auto}.menu li+li{margin-left:var(--gap)}.menu a{font-size:16px}.main{position:relative;min-height:calc(100vh - var(--header-height) - var(--footer-height));max-width:calc(var(--main-width) + var(--gap) * 2);margin-left:auto;margin-right:auto;padding:var(--gap)}.page-header{margin-bottom:24px}.page-header h1{font-size:40px}.pagination{display:flex}.pagination a{color:var(--theme);font-size:13px;line-height:36px;background:var(--primary);border-radius:calc(36px/2)}.pagination .prev{padding-left:16px;padding-right:18px}.pagination .next{margin-left:auto;padding-left:18px;padding-right:16px}.first-entry{position:relative;display:flex;flex-direction:column;justify-content:center;height:320px;margin-bottom:var(--header-height)}.first-entry .entry-header{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}.first-entry .entry-header h2{font-size:40px}.first-entry .entry-content{margin-top:14px;margin-bottom:14px;font-size:16px;-webkit-line-clamp:3}.first-entry .entry-footer{font-size:14px}.post-entry{position:relative;margin-bottom:var(--gap);padding:var(--gap);background:var(--entry);border-radius:var(--radius);transition:transform .1s}.post-entry:active{transform:scale(.96)}.tag-entry .entry-content,.tag-entry .entry-footer{display:none}.entry-header h2{font-size:24px}.entry-content{margin-top:8px;margin-bottom:8px;color:var(--secondary);font-size:14px;line-height:1.6;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.entry-footer{color:var(--secondary);font-size:13px}.entry-link{position:absolute;left:0;right:0;top:0;bottom:0}.post-header{margin-top:24px;margin-bottom:var(--content-gap)}.post-title{margin-bottom:2px;font-size:40px;transform:translateX(-2px)}.post-meta{color:var(--secondary);font-size:14px}.post-content{color:var(--content)}.post-content h1{margin-top:40px;margin-bottom:32px}.post-content h2{margin-top:32px;margin-bottom:24px}.post-content h3,.post-content h4,.post-content h5,.post-content h6{margin-top:24px;margin-bottom:16px}.post-content h1{font-size:40px}.post-content h2{font-size:32px}.post-content h3{font-size:24px}.post-content h4{font-size:16px}.post-content h5{font-size:14px}.post-content h6{font-size:12px}.post-content a{box-shadow:0 1px 0 var(--primary)}.post-content a code{margin-left:0;margin-right:0;border-radius:0;box-shadow:0 -1px 0 var(--primary)inset}.post-content del{text-decoration:none;background:linear-gradient(to right,var(--primary) 100%,transparent 0)0/1px 1px repeat-x}.post-content p,.post-content ul,.post-content ol,.post-content dl{margin-bottom:var(--content-gap)}.post-content ul,.post-content ol{padding-left:20px}.post-content li{margin-top:5px}.post-content li p{margin-bottom:0}.post-content dl{display:flex;flex-wrap:wrap;margin:0}.post-content dt{width:25%;font-weight:700}.post-content dd{width:75%;margin-left:0;padding-left:10px}.post-content dt~dt,.post-content dd~dd{margin-top:10px}.post-content table{margin-bottom:32px}.post-content table th,.post-content table:not(.highlighttable) td{min-width:80px;padding:12px 8px;line-height:1.5;border-bottom:1px solid var(--border)}.post-content table th{font-size:14px;text-align:left}.post-content table:not(.highlighttable) td code:only-child{margin-left:0;margin-right:0}.post-content .highlight,.post-content pre{margin-left:calc(var(--gap) * -1);margin-right:calc(var(--gap) * -1);margin-bottom:32px;background:var(--hljs-bg)!important;border-radius:var(--radius);overflow-x:auto}.post-content ul pre{margin-left:calc(var(--gap) * -2)}.post-content .highlight pre{margin-left:0;margin-right:0;margin-bottom:0}.post-content .highlighttable{table-layout:fixed}.post-content .highlighttable td:first-child{width:40px}.post-content .highlighttable td .linenodiv{padding-right:0!important}.post-content .highlighttable td .linenodiv pre,.post-content .highlighttable td .highlight{margin-bottom:0}.post-content .highlighttable td .highlight pre code::-webkit-scrollbar{display:none}.post-content .highlight span{background:0 0!important}.post-content code{margin-left:4px;margin-right:4px;padding:4px 6px;font-family:Menlo,Monaco,courier new,Courier,monospace;font-size:.78em;line-height:1.5;background:var(--code-bg);border-radius:2px}.post-content pre code{display:block;margin-left:0;margin-right:0;padding:var(--gap);color:rgba(255,255,255,.8);background:0 0;border-radius:0}.post-content blockquote{margin:0 0 0 calc(var(--gap) * -1);padding:0 0 0 21px;border-left:3px solid var(--primary)}.post-content hr{height:1px;margin-top:56px;margin-bottom:56px;background:var(--tertiary);border-top:0;border-bottom:0}.post-content iframe{max-width:100%}.post-footer{margin-top:56px}.post-tags li{display:inline-block}.post-tags li+li{margin-left:3px}.post-tags a{display:block;padding-left:14px;padding-right:14px;color:var(--secondary);font-size:14px;line-height:34px;background:var(--code-bg);border-radius:4px}.post-tags a:hover{background:var(--border)}.footer{max-width:calc(var(--main-width) + var(--gap) * 2);margin-left:auto;margin-right:auto;padding:calc((var(--footer-height) - var(--gap))/2)var(--gap);color:var(--secondary);font-size:12px;text-align:center;line-height:24px}.footer span{margin-left:1px;margin-right:1px}.footer a{color:inherit}.footer a:hover{color:var(--primary);border-bottom:1px solid var(--primary)}.not-found{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;height:80%;font-size:160px;font-weight:700}</style><link rel=apple-touch-icon href=http://redfox58.github.io/bitcoin/apple-touch-icon.png><link rel=icon href=http://redfox58.github.io/bitcoin/favicon.ico><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=http://redfox58.github.io/bitcoin/index.xml title=Bitcoin><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content><meta property="og:title" content><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="http://redfox58.github.io/bitcoin/"><meta property="og:updated_time" content="2021-06-01T01:24:07+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"Bitcoin","url":"http://redfox58.github.io/bitcoin","description":"","thumbnailUrl":"http://redfox58.github.io/bitcoin/favicon.ico","sameAs":[]}</script></head><body class="list home"><header class=header><nav class=nav><h1 class=logo><a href=http://redfox58.github.io/bitcoin>Bitcoin</a></h1></nav></header><main class=main><article class=post-entry><header class=entry-header><h2>Bitcoin Mining Js</h2></header><section class=entry-content><p>User92592 Sep 28 17 at 1940 It uses them. Add to this mining mining rewards and blocks containing transactions.
-Buy Bitcoin Mining Script At Affordable Cost What Is Bitcoin Mining Bitcoin Mining Bitcoin
-3252019 CoinIMP is the best JavaScript Bitcoin mining tool of 2019. Bitcoin mining js. However they decided to shut down their operations. 1012020 Bitcoin mining is performed by high-powered computers that solve complex computational math problems. This is a guest post by Michiel Mulders on How To Code a Bitcoin-like Blockchain In JavaScript....</p></section><footer class=entry-footer><time>April 22, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-mining-js/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin Farm Tarkov</h2></header><section class=entry-content><p>These are some of the more complex model Escape from Tarkov Hideout Complete Guide. 5142021 The bitcoin farm in escape from tarkov is one of two improvements you can make to your hideout allowing passive income but its expensive to build production stops if there are no graphics cards installed the power is off or there are 3 bitcoins waiting to be collected.
-For Those Of You Wondering If The Btc Farm Is Still Worth Building I Graphed The Time It Takes To Break Even After Fuel And Hideout Upgrade Costs Escapefromtarkov...</p></section><footer class=entry-footer><time>April 22, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-farm-tarkov/></a></article><article class=post-entry><header class=entry-header><h2>Pasaran Bitcoin Hari Ini</h2></header><section class=entry-content><p>Harga Bitcoin dalam dolar adalah penunjuk utama kadar Bitcoin. 3 Mei 2021Tanggal Jawa.
-Seberapa Besar Daya Listrik Yang Digunakan Oleh Bitcoin Halaman All Kompas Com
-Berdasarkan riset pada Januari 2021 Bitcoin menguasai 68 persen pasar aset kripto yang kemudian diikuti oleh Ethereum sebesar 13 oersen. Pasaran bitcoin hari ini. Invesnesia Harga Bitcoin hari ini Sabtu 13321 melambung 55 ke level 60410 atau setara Rp870 juta per keping asumsi kurs Rp14390 sekaligus mencatatkan harga tertinggi sepanjang sejarah all time highATHTiada ampun harga Bitcoin hari ini kembali menguat sangat tajam untuk menegaskan kekuatan tren naik sekaligus membalas penurunan harga yang terjadi kemarin....</p></section><footer class=entry-footer><time>April 19, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/pasaran-bitcoin-hari-ini/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin Price Usd Market Insider</h2></header><section class=entry-content><p>If 11 million bitcoins were released into the market the digital currencys price would almost surely fall. 3272021 Today bitcoin is swapping for prices between 54400 to 54800 per unit and commands a 102 trillion market valuation.
-Pin On Cryptocurrency News
-This bitcoin price dip and other market moves. Bitcoin price usd market insider. 4142021 Bitcoins value has largely been driven by its deflationary tendencies. Gemini twins Cameron and Tyler Winklevoss have made their prediction on the price of Bitcoin reckoning its just a matter of time before Bitcoin is worth 500000 USD....</p></section><footer class=entry-footer><time>April 19, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-price-usd-market-insider/></a></article><article class=post-entry><header class=entry-header><h2>Apa Bitcoin Itu Halal</h2></header><section class=entry-content><p>How chickens are killed in halal google search logo bunga desain logo restoran desain logo bisnis. Karena memang secara umum masih banyak yg memfatwakan bermain bitcoin itu tidak haram.
-Ngeri Hukum Bitcoin Dalam Islam Menurut Adi Hidayat Abdul Somad Uas Erwandi Tarmizi Buya Yahya Youtube
-Sebagian besar cryptocurrency adalah jaringan terdesentralisasi berdasarkan teknologi blockchainCryptocurrency memungkinkan transaksi online yang aman menggunakan token. Apa bitcoin itu halal. 11202018 Apakah Bitcoin Halal. Sementara itu harga bitcoin saat ini berada di kisaran 57 ribu dolar AS atau sekitar Rp8258 juta....</p></section><footer class=entry-footer><time>April 19, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/apa-bitcoin-itu-halal/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin Price Prediction 2022</h2></header><section class=entry-content><p>4192021 BTC Price Prediction 2022 If the current price is at 35 17126 what is the Bitcoin future value. 378 rows Maximum price 2022 January.
-Bitcoin Halvening Prediction In Logarithmic Chart Bitcoin Cryptocurrency Market Capitalization Bitcoin Cryptocurrency
-4132021 Bitcoin Price Prediction 2022 2023 Unfortunately just like what happened after the 2017 bubble bursting a bear market comes right after. Bitcoin price prediction 2022. Thats 174 down from todays price. Bitcoin SV Price Prediction for 2023....</p></section><footer class=entry-footer><time>April 18, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-price-prediction-2022/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin Us Dollar</h2></header><section class=entry-content><p>280132E-5 Bitcoin 0000420198 Bitcoin. Learn about BTC value bitcoin cryptocurrency crypto trading and more.
-Right Time To Convert Or Exchange 0 01 Btc To Usd Currency Btc Exchange Best Cryptocurrency Exchange Best Cryptocurrency
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Bitcoin</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<style>
+ 
+:root {
+  --gap: 24px;
+  --content-gap: 40px;
+  --nav-width: 1024px;
+  --main-width: 640px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 8px;
+
+  --theme: #fff;
+  --entry: #fff;
+  --primary: rgba(0, 0, 0, 0.88);
+  --secondary: rgba(0, 0, 0, 0.56);
+  --tertiary: rgba(0, 0, 0, 0.16);
+  --content: rgba(0, 0, 0, 0.88);
+
+  --hljs-bg: #1c1d21;
+  --code-bg: #f5f5f5;
+  --border: #eee;
+}
+.dark {
+  --theme: #1d1e20;
+  --entry: #2e2e33;
+  --primary: rgba(255, 255, 255, 0.84);
+  --secondary: rgba(255, 255, 255, 0.56);
+  --tertiary: rgba(255, 255, 255, 0.16);
+  --content: rgba(255, 255, 255, 0.64);
+
+  --hljs-bg: #2e2e33;
+  --code-bg: #37383e;
+  --border: #5b5d67;
+}
+.list {
+  background: var(--code-bg);
+}
+.dark.list {
+  background: var(--theme);
+}
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  color: var(--primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  word-break: break-word;
+  background: var(--theme);
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--primary);
+  line-height: 1.2;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+strong,
+b {
+  font-weight: 500;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+figure {
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button,
+input,
+textarea {
+  padding: 0;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+button,
+input[type='button'],
+input[type='submit'] {
+  cursor: pointer;
+}
+input,
+textarea {
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  box-shadow: 0 0 0 50px var(--theme) inset;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  display: block;
+  line-height: var(--header-height);
+}
+.logo,
+.menu {
+  margin-left: var(--gap);
+  margin-right: var(--gap);
+}
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  word-break: keep-all;
+  overflow-x: auto;
+}
+.menu li + li {
+  margin-left: var(--gap);
+}
+.menu a {
+  font-size: 16px;
+}
+ 
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--gap);
+}
+.page-header {
+  margin-bottom: 24px;
+}
+.page-header h1 {
+  font-size: 40px;
+}
+.pagination {
+  display: flex;
+}
+.pagination a {
+  color: var(--theme);
+  font-size: 13px;
+  line-height: 36px;
+  background: var(--primary);
+  border-radius: calc(36px / 2);
+}
+.pagination .prev {
+  padding-left: 16px;
+  padding-right: 18px;
+}
+.pagination .next {
+  margin-left: auto;
+  padding-left: 18px;
+  padding-right: 16px;
+}
+ 
+.first-entry {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 320px;
+  margin-bottom: var(--header-height);
+}
+.first-entry .entry-header {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.first-entry .entry-header h2 {
+  font-size: 40px;
+}
+.first-entry .entry-content {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  -webkit-line-clamp: 3;
+}
+.first-entry .entry-footer {
+  font-size: 14px;
+}
+.post-entry {
+  position: relative;
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
+  transition: transform 0.1s;
+}
+.post-entry:active {
+  transform: scale(0.96);
+}
+.tag-entry .entry-content,
+.tag-entry .entry-footer {
+  display: none;
+}
+.entry-header h2 {
+  font-size: 24px;
+}
+.entry-content {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.entry-footer {
+  color: var(--secondary);
+  font-size: 13px;
+}
+.entry-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+ 
+.post-header {
+  margin-top: 24px;
+  margin-bottom: var(--content-gap);
+}
+.post-title {
+  margin-bottom: 2px;
+  font-size: 40px;
+  transform: translateX(-2px);
+}
+.post-meta {
+  color: var(--secondary);
+  font-size: 14px;
+}
+.post-content {
+  color: var(--content);
+}
+.post-content h1 {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.post-content h2 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.post-content h1 {
+  font-size: 40px;
+}
+.post-content h2 {
+  font-size: 32px;
+}
+.post-content h3 {
+  font-size: 24px;
+}
+.post-content h4 {
+  font-size: 16px;
+}
+.post-content h5 {
+  font-size: 14px;
+}
+.post-content h6 {
+  font-size: 12px;
+}
+.post-content a {
+  box-shadow: 0 1px 0 var(--primary);
+}
+.post-content a code {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  box-shadow: 0 -1px 0 var(--primary) inset;
+}
+.post-content del {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
+}
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content dl {
+  margin-bottom: var(--content-gap);
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 20px;
+}
+.post-content li {
+  margin-top: 5px;
+}
+.post-content li p {
+  margin-bottom: 0;
+}
+.post-content dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.post-content dt {
+  width: 25%;
+  font-weight: 700;
+}
+.post-content dd {
+  width: 75%;
+  margin-left: 0;
+  padding-left: 10px;
+}
+.post-content dt ~ dt,
+.post-content dd ~ dd {
+  margin-top: 10px;
+}
+.post-content table {
+  margin-bottom: 32px;
+}
+.post-content table th,
+.post-content table:not(.highlighttable) td {
+  min-width: 80px;
+  padding: 12px 8px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+.post-content table th {
+  font-size: 14px;
+  text-align: left;
+}
+.post-content table:not(.highlighttable) td code:only-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+.post-content .highlight,
+.post-content pre {
+  margin-left: calc(var(--gap) * -1);
+  margin-right: calc(var(--gap) * -1);
+  margin-bottom: 32px;
+  background: var(--hljs-bg) !important;
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.post-content ul pre {
+  margin-left: calc(var(--gap) * -2);
+}
+.post-content .highlight pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+ 
+.post-content .highlighttable {
+  table-layout: fixed;
+}
+.post-content .highlighttable td:first-child {
+  width: 40px;
+}
+.post-content .highlighttable td .linenodiv {
+  padding-right: 0 !important;
+}
+.post-content .highlighttable td .linenodiv pre,
+.post-content .highlighttable td .highlight {
+  margin-bottom: 0;
+}
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+  display: none;
+}
+ 
+.post-content .highlight span {
+  background: transparent !important;
+}
+
+.post-content code {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 4px 6px;
+  font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
+  font-size: 0.78em;
+  line-height: 1.5;
+  background: var(--code-bg);
+  border-radius: 2px;
+}
+.post-content pre code {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: var(--gap);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border-radius: 0;
+}
+.post-content blockquote {
+  margin: 0 0 0 calc(var(--gap) * -1);
+  padding: 0 0 0 21px;
+  border-left: 3px solid var(--primary);
+}
+.post-content hr {
+  height: 1px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  background: var(--tertiary);
+  border-top: 0;
+  border-bottom: 0;
+}
+.post-content iframe {
+  max-width: 100%;
+}
+.post-footer {
+  margin-top: 56px;
+}
+.post-tags li {
+  display: inline-block;
+}
+.post-tags li + li {
+  margin-left: 3px;
+}
+.post-tags a {
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 34px;
+  background: var(--code-bg);
+  border-radius: 4px;
+}
+.post-tags a:hover {
+  background: var(--border);
+}
+ 
+.footer {
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+  color: var(--secondary);
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+.footer span {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.footer a {
+  color: inherit;
+}
+.footer a:hover {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+ 
+.not-found {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  font-size: 160px;
+  font-weight: 700;
+}
+
+</style>
+    
+    <link rel="apple-touch-icon" href="http://redfox58.github.io/bitcoin/apple-touch-icon.png">
+    <link rel="icon" href="http://redfox58.github.io/bitcoin/favicon.ico">
+    <meta name="generator" content="Hugo 0.83.1" />
+    
+    <link rel="alternate" type="application/rss+xml" href="http://redfox58.github.io/bitcoin/index.xml" title="Bitcoin" />
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
+<meta property="og:title" content="" />
+<meta property="og:description" content=""/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://redfox58.github.io/bitcoin/" />
+<meta property="og:updated_time" content="2021-06-01T01:24:07+00:00" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bitcoin",
+  "url": "http://redfox58.github.io/bitcoin",
+  "description": "",
+  "thumbnailUrl": "http://redfox58.github.io/bitcoin/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>	
+  </head>
+  <body class="list home">
+	<header class="header">
+      <nav class="nav">
+        <h1 class="logo"><a href="http://redfox58.github.io/bitcoin">Bitcoin</a></h1>
+      </nav>
+    </header>
+	<main class="main">
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Mining Js</h2>
+  </header>
+  <section class="entry-content">
+   <p>User92592 Sep 28 17 at 1940 It uses them. Add to this mining mining rewards and blocks containing transactions.
+ Buy Bitcoin Mining Script At Affordable Cost What Is Bitcoin Mining Bitcoin Mining Bitcoin
+3252019 CoinIMP is the best JavaScript Bitcoin mining tool of 2019. Bitcoin mining js. However they decided to shut down their operations. 1012020 Bitcoin mining is performed by high-powered computers that solve complex computational math problems. This is a guest post by Michiel Mulders on How To Code a Bitcoin-like Blockchain In JavaScript....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 22, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-mining-js/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Farm Tarkov</h2>
+  </header>
+  <section class="entry-content">
+   <p>These are some of the more complex model Escape from Tarkov Hideout Complete Guide. 5142021 The bitcoin farm in escape from tarkov is one of two improvements you can make to your hideout allowing passive income but its expensive to build production stops if there are no graphics cards installed the power is off or there are 3 bitcoins waiting to be collected.
+ For Those Of You Wondering If The Btc Farm Is Still Worth Building I Graphed The Time It Takes To Break Even After Fuel And Hideout Upgrade Costs Escapefromtarkov...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 22, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-farm-tarkov/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Pasaran Bitcoin Hari Ini</h2>
+  </header>
+  <section class="entry-content">
+   <p>Harga Bitcoin dalam dolar adalah penunjuk utama kadar Bitcoin. 3 Mei 2021Tanggal Jawa.
+ Seberapa Besar Daya Listrik Yang Digunakan Oleh Bitcoin Halaman All Kompas Com
+Berdasarkan riset pada Januari 2021 Bitcoin menguasai 68 persen pasar aset kripto yang kemudian diikuti oleh Ethereum sebesar 13 oersen. Pasaran bitcoin hari ini. Invesnesia Harga Bitcoin hari ini Sabtu 13321 melambung 55 ke level 60410 atau setara Rp870 juta per keping asumsi kurs Rp14390 sekaligus mencatatkan harga tertinggi sepanjang sejarah all time highATHTiada ampun harga Bitcoin hari ini kembali menguat sangat tajam untuk menegaskan kekuatan tren naik sekaligus membalas penurunan harga yang terjadi kemarin....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 19, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/pasaran-bitcoin-hari-ini/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Price Usd Market Insider</h2>
+  </header>
+  <section class="entry-content">
+   <p>If 11 million bitcoins were released into the market the digital currencys price would almost surely fall. 3272021 Today bitcoin is swapping for prices between 54400 to 54800 per unit and commands a 102 trillion market valuation.
+ Pin On Cryptocurrency News
+This bitcoin price dip and other market moves. Bitcoin price usd market insider. 4142021 Bitcoins value has largely been driven by its deflationary tendencies. Gemini twins Cameron and Tyler Winklevoss have made their prediction on the price of Bitcoin reckoning its just a matter of time before Bitcoin is worth 500000 USD....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 19, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-price-usd-market-insider/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Apa Bitcoin Itu Halal</h2>
+  </header>
+  <section class="entry-content">
+   <p>How chickens are killed in halal google search logo bunga desain logo restoran desain logo bisnis. Karena memang secara umum masih banyak yg memfatwakan bermain bitcoin itu tidak haram.
+ Ngeri Hukum Bitcoin Dalam Islam Menurut Adi Hidayat Abdul Somad Uas Erwandi Tarmizi Buya Yahya Youtube
+Sebagian besar cryptocurrency adalah jaringan terdesentralisasi berdasarkan teknologi blockchainCryptocurrency memungkinkan transaksi online yang aman menggunakan token. Apa bitcoin itu halal. 11202018 Apakah Bitcoin Halal. Sementara itu harga bitcoin saat ini berada di kisaran 57 ribu dolar AS atau sekitar Rp8258 juta....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 19, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/apa-bitcoin-itu-halal/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Price Prediction 2022</h2>
+  </header>
+  <section class="entry-content">
+   <p>4192021 BTC Price Prediction 2022 If the current price is at 35 17126 what is the Bitcoin future value. 378 rows Maximum price 2022 January.
+ Bitcoin Halvening Prediction In Logarithmic Chart Bitcoin Cryptocurrency Market Capitalization Bitcoin Cryptocurrency
+4132021 Bitcoin Price Prediction 2022 2023 Unfortunately just like what happened after the 2017 bubble bursting a bear market comes right after. Bitcoin price prediction 2022. Thats 174 down from todays price. Bitcoin SV Price Prediction for 2023....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 18, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-price-prediction-2022/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Us Dollar</h2>
+  </header>
+  <section class="entry-content">
+   <p>280132E-5 Bitcoin 0000420198 Bitcoin. Learn about BTC value bitcoin cryptocurrency crypto trading and more.
+ Right Time To Convert Or Exchange 0 01 Btc To Usd Currency Btc Exchange Best Cryptocurrency Exchange Best Cryptocurrency
 5212021 1 US Dollar is 0000028 Bitcoin. Bitcoin us dollar. 15 Bitcoin 15. Convert 15 United States Dollar to Bitcoin. 5152021 Selling 100 USD you get 0000030 BTC.
-100 Bitcoin BTC 30239 US dollar USD Foreign exchange converter and cryptocurrency converter....</p></section><footer class=entry-footer><time>April 18, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-us-dollar/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin News Will It Rise</h2></header><section class=entry-content><p>3172021 The dark side of Bitcoins meteoric rise Bitcoin may be making some investors rich at least for now. 332021 Bitcoin News Michael Burry.
-Selcoin The First Wave Of Rise In Bitcoin Price Will Last Up To 8 500 Binancecoin Bitcoin Bitcoincash Commiss Cryptocurrency Crypto Money Bitcoin Price
-592021 A deeper dive into bitcoins fundamentals and recent market trends shows that the price bull run is nowhere near its top....</p></section><footer class=entry-footer><time>April 18, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-news-will-it-rise/></a></article><article class=post-entry><header class=entry-header><h2>Harga Bitcoin Hari Ini Rupiah Indodax</h2></header><section class=entry-content><p>4162021 Volume Transaksi Bitcoin di Indonesia Hanya 1 Persen dari Transaksi Dunia Sempat Sentuh Rp 92375 Juta Harga Bitcoin Hari Ini Rp 91249 Juta Cetak Rekor Baru Harga Bitcoin Tembus Rp 900 Juta Terus Naik Harga Bitcoin Tembus Rp 889 Juta Per Keping. Akibat Covid-19 Jumlah Pengangguran RI Tembus 875 Juta.
-Indodax On Twitter Pertama Kali Dalam Sejarah Harga Bitcoin Menembus Rp300 Juta Rupiah Sudah Profit Berapakah Kamu Hari Ini Indodax Asetmasadepan Price Hargabitcoin Btc Asetkripto Tothemoon Https T Co Ylpzrq6q4x...</p></section><footer class=entry-footer><time>April 14, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/harga-bitcoin-hari-ini-rupiah-indodax/></a></article><article class=post-entry><header class=entry-header><h2>Bitcoin Price Xe</h2></header><section class=entry-content><p>Bitcoin Cash BCH value live real-time at May 25 2021 062424 price update in 58 seconds Bitcoin Cash equals 70765 US dollar. The post Square reports 351 billion in bitcoin revenue via its Cash app for first quarter of 2021 appeared first on The Block.
-The Billion Coin Value In 2021 Coin Values Crypto Currencies Coins
-Square hauled in 351 billion in bitcoin revenue during 2021s first quarter according to Thursdays earnings release....</p></section><footer class=entry-footer><time>April 13, 2021</time></footer><a class=entry-link href=http://redfox58.github.io/bitcoin/bitcoin-price-xe/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=/bitcoin/page/4/>←</a>
-<a class=next href=/bitcoin/page/6/>→</a></nav></footer></main></main></div><footer class=footer><span>&copy; 2021 <a href=http://redfox58.github.io/bitcoin>Bitcoin</a></span>
-<span>&#183;</span>
-<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
-<span>&#183;</span>
-<span>Theme️ <a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper</a></span></footer></body></html>
+100 Bitcoin BTC 30239 US dollar USD Foreign exchange converter and cryptocurrency converter....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 18, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-us-dollar/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin News Will It Rise</h2>
+  </header>
+  <section class="entry-content">
+   <p>3172021 The dark side of Bitcoins meteoric rise Bitcoin may be making some investors rich at least for now. 332021 Bitcoin News Michael Burry.
+ Selcoin The First Wave Of Rise In Bitcoin Price Will Last Up To 8 500 Binancecoin Bitcoin Bitcoincash Commiss Cryptocurrency Crypto Money Bitcoin Price
+592021 A deeper dive into bitcoins fundamentals and recent market trends shows that the price bull run is nowhere near its top....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 18, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-news-will-it-rise/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Harga Bitcoin Hari Ini Rupiah Indodax</h2>
+  </header>
+  <section class="entry-content">
+   <p>4162021 Volume Transaksi Bitcoin di Indonesia Hanya 1 Persen dari Transaksi Dunia Sempat Sentuh Rp 92375 Juta Harga Bitcoin Hari Ini Rp 91249 Juta Cetak Rekor Baru Harga Bitcoin Tembus Rp 900 Juta Terus Naik Harga Bitcoin Tembus Rp 889 Juta Per Keping. Akibat Covid-19 Jumlah Pengangguran RI Tembus 875 Juta.
+ Indodax On Twitter Pertama Kali Dalam Sejarah Harga Bitcoin Menembus Rp300 Juta Rupiah Sudah Profit Berapakah Kamu Hari Ini Indodax Asetmasadepan Price Hargabitcoin Btc Asetkripto Tothemoon Https T Co Ylpzrq6q4x...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 14, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/harga-bitcoin-hari-ini-rupiah-indodax/"></a>
+</article>
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Bitcoin Price Xe</h2>
+  </header>
+  <section class="entry-content">
+   <p>Bitcoin Cash BCH value live real-time at May 25 2021 062424 price update in 58 seconds Bitcoin Cash equals 70765 US dollar. The post Square reports 351 billion in bitcoin revenue via its Cash app for first quarter of 2021 appeared first on The Block.
+ The Billion Coin Value In 2021 Coin Values Crypto Currencies Coins
+Square hauled in 351 billion in bitcoin revenue during 2021s first quarter according to Thursdays earnings release....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>April 13, 2021</time>
+  </footer>
+  <a class="entry-link" href="http://redfox58.github.io/bitcoin/bitcoin-price-xe/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/bitcoin/page/4/">← </a>
+    <a class="next" href="/bitcoin/page/6/"> →</a>
+  </nav>
+</footer></main>
+</main>
+</div>
+<footer class="footer">
+  <span>&copy; 2021 <a href="http://redfox58.github.io/bitcoin">Bitcoin</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+</body>
+</html>
+
