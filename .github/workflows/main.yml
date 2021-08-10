@@ -1,0 +1,14 @@
+name: Build and deploy Hugo site
+on: [push]
+jobs:
+   - name: FTP Deploy Forked
+     uses: SnowyGFL/FTP-Deploy-Action@1.3.2
+   - name: Deploy
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.1.0
+        with:
+          ftp_host: ftp.gapura.my.id
+          ftp_username: adm@my-google.eu.org
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          local_source_dir: "public"
+          dist_target_dir: "/home/oiuiprtj/my-google.eu.org/adm"
+          delete: "false"
